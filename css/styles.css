@@ -72,3 +72,63 @@ main {
   padding: 0.5em 1em;
   color: #fff;
 }
+
+@media screen and (min-width: 768px) {
+  body { 
+    
+    display: grid;
+    gap: 6px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:  
+    "header header"
+     "main main";
+
+   }
+   header{
+    grid-area:header ;
+    display: grid;
+    grid-template-areas:  
+    "title nav";
+    align-items: center;
+   }
+   
+ 
+
+   nav{
+    grid-area: nav;
+    display: flex;
+    justify-content: flex-end;
+
+   }
+   header .title{
+    grid-area: title;
+   }
+   header ul {
+    display: flex;
+   }
+
+   header a {
+    border-top: none;
+  }
+
+  main{
+    grid-area: main;  
+    display: grid;
+    grid-template-areas: 
+    "article article article article aside";
+    gap: 14px;
+   }
+   
+  main article{
+    grid-area: article;
+  }
+  main aside{
+    grid-area: aside;
+  }
+  .cards{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 11px;
+  }
+    
+ }
